@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "467d5a22-8c97-4f2e-8e03-cd83ca866499",
+		"name": "LEKTO|Desafio 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15810205"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Quantidade do objeto\", function () {\r",
+							"    var jsonData = {\r",
+							"        \"count\": 7,\r",
+							"        \"entries\": [\r",
+							"            {\r",
+							"                \"API\": \"Auth0\",\r",
+							"                \"Description\": \"Easy to implement, adaptable authentication and authorization platform\",\r",
+							"                \"Auth\": \"apiKey\",\r",
+							"                \"HTTPS\": true,\r",
+							"                \"Cors\": \"yes\",\r",
+							"                \"Link\": \"https://auth0.com\",\r",
+							"                \"Category\": \"Authentication & Authorization\"\r",
+							"            },\r",
+							"            {\r",
+							"                \"API\": \"GetOTP\",\r",
+							"                \"Description\": \"Implement OTP flow quickly\",\r",
+							"                \"Auth\": \"apiKey\",\r",
+							"                \"HTTPS\": true,\r",
+							"                \"Cors\": \"no\",\r",
+							"                \"Link\": \"https://otp.dev/en/docs/\",\r",
+							"                \"Category\": \"Authentication & Authorization\"\r",
+							"            },\r",
+							"            {\r",
+							"                \"API\": \"Micro User Service\",\r",
+							"                \"Description\": \"User management and authentication\",\r",
+							"                \"Auth\": \"apiKey\",\r",
+							"                \"HTTPS\": true,\r",
+							"                \"Cors\": \"no\",\r",
+							"                \"Link\": \"https://m3o.com/user\",\r",
+							"                \"Category\": \"Authentication & Authorization\"\r",
+							"            },\r",
+							"            {\r",
+							"                \"API\": \"MojoAuth\",\r",
+							"                \"Description\": \"Secure and modern passwordless authentication platform\",\r",
+							"                \"Auth\": \"apiKey\",\r",
+							"                \"HTTPS\": true,\r",
+							"                \"Cors\": \"yes\",\r",
+							"                \"Link\": \"https://mojoauth.com\",\r",
+							"                \"Category\": \"Authentication & Authorization\"\r",
+							"            },\r",
+							"            {\r",
+							"                \"API\": \"SAWO Labs\",\r",
+							"                \"Description\": \"Simplify login and improve user experience by integrating passwordless authentication in your app\",\r",
+							"                \"Auth\": \"apiKey\",\r",
+							"                \"HTTPS\": true,\r",
+							"                \"Cors\": \"yes\",\r",
+							"                \"Link\": \"https://sawolabs.com\",\r",
+							"                \"Category\": \"Authentication & Authorization\"\r",
+							"            },\r",
+							"            {\r",
+							"                \"API\": \"Stytch\",\r",
+							"                \"Description\": \"User infrastructure for modern applications\",\r",
+							"                \"Auth\": \"apiKey\",\r",
+							"                \"HTTPS\": true,\r",
+							"                \"Cors\": \"no\",\r",
+							"                \"Link\": \"https://stytch.com/\",\r",
+							"                \"Category\": \"Authentication & Authorization\"\r",
+							"            },\r",
+							"            {\r",
+							"                \"API\": \"Warrant\",\r",
+							"                \"Description\": \"APIs for authorization and access control\",\r",
+							"                \"Auth\": \"apiKey\",\r",
+							"                \"HTTPS\": true,\r",
+							"                \"Cors\": \"yes\",\r",
+							"                \"Link\": \"https://warrant.dev/\",\r",
+							"                \"Category\": \"Authentication & Authorization\"\r",
+							"            }\r",
+							"        ]\r",
+							"    };\r",
+							"\r",
+							"    var objetoProcurado = {\r",
+							"        \"Category\": \"Authentication & Authorization\"\r",
+							"    };\r",
+							"\r",
+							"    var contador = 0;\r",
+							"\r",
+							"    jsonData.entries.forEach(function (entrada) {\r",
+							"        if (entrada.Category === objetoProcurado.Category) {\r",
+							"            contador++;\r",
+							"            console.log('\"Category\": \"Authentication & Authorization\"');\r",
+							"        }\r",
+							"    });\r",
+							"\r",
+							"    console.log(\"Quantidade de ocorrências do objeto:\", contador);\r",
+							"    pm.expect(contador).to.equal(7);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.publicapis.org/entries?Category=Authentication %26 Authorization",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "Category",
+							"value": "Authentication %26 Authorization"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
