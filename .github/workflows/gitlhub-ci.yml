@@ -37,7 +37,7 @@ jobs:
         
       # Runs a set of commands using the runners shell
       - name: Step 3 Execute collection
-        run: newman run ./LEKTO-Desafio2.postman_collection.json -e ./workspace.postman_globalsjson --reporters cli, -r htmlextra --reporter-htmlextra-export ./results/Report.html
+        run: newman run ./LEKTO-Desafio2.postman_collection.json -e ./workspace.postman_globals.json --reporters cli, -r htmlextra --reporter-htmlextra-export ./results/Report.html
    
       # Runs a set of commands using the runners shell
       - name: Step 4 Archive production artifacts
